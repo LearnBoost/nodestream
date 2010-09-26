@@ -43,14 +43,14 @@ This approach has drawbacks:
 
 Building on top of the powerful jade template engine filters, nodestream solves the problems listed above by making only two changes to your applications:
 
-1. Firing events
+1) Firing events
 
 	database.saveItem(item){
 		...
 		nodestream.emit('newitem', item)
 	}
 	
-2. Adding a line of code to your template (`:realtime`)
+2) Adding a line of code to your template (`:realtime`)
 
 	:realtime(append: 'newitem', local: 'items', obj: 'item')
 		div.item
